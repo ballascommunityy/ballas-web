@@ -42,25 +42,13 @@
     <h2>Submit Your Application</h2>
     <form id="appForm">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" required>
+        <input type="text" id="name" placeholder="Enter your Roleplay Full Name" required>
 
-        <label for="discord">Age IRL:</label>
-        <input type="discord" id="discord" placeholder="Enter your Real Life Age" required>
+        <label for="message">Age IRL:</label>
+        <input type="messae" id="message" placeholder="Enter your Real Life Age" required>
 
         <label for="discord">Discord ID:</label>
         <input type="discord" id="discord" placeholder="Enter your Discord ID" required>
-
-        <label for="message">Experince Rp</label>
-        <textarea id="message" rows="4" required></textarea>
-
-        <label for="message">Why do you want to join?</label>
-        <textarea id="message" rows="4" required></textarea>
-
-        <label for="message">Do you understand every server rule?</label>
-        <textarea id="message" rows="4" required></textarea>
-
-        <label for="message">Why do you want to join the Ballas Gang?</label>
-        <textarea id="message" rows="4" required></textarea>
 
         <button type="submit">Submit</button>
     </form>
@@ -79,7 +67,7 @@
 
             // Construct message for Discord
             const payload = {
-                content: `📩 **New Application Received!**\n\n**Name:** ${name}\n**discord Id:** ${discord}\n**Exp Rp:** ${message}\n**Do you understand every server rule?:** ${message}\n**Why do you want to join the Ballas Gang?** ${message}\n**Age Irl** ${message}`
+                content: `📩 **New Application Received!**\n\n**Name:** ${name}\n**Age Irl: ** ${message}\n**discord Id:${discord}**`
             };
 
             // Send data to Discord webhook
