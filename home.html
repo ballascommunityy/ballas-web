@@ -7,12 +7,52 @@
     <title>Ballas Gang</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* Fix dropdown menu */
+        .dropdown {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            transform: translateY(-500px);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        .dropdown .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .dropdown a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+
+        /* Ensure button inside <a> works */
+        .btn a {
+            display: inline-block;
+        }
+
+        .btn button {
+            background: purple;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
-            </div>
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000"></div>
             <div class="nav-container">
                 <ul class="links">
                     <li class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
@@ -32,63 +72,71 @@
                     </li>
                 </ul>
             </div>
-            
-            
-            
-            
-            </a>
-            </div>
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
         <div class="dropdown">
             <div class="links">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Story</a>
-                <a href="">Ranks</a>
-                <a href="">How To Join</a>
-                <a href="">Apply</a>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="story.html">Story</a>
+                <a href="ranks.html">Ranks</a>
+                <a href="apply.html">How To Join</a>
+                <a href="https://discord.gg/chQagNKae4">Discord Server</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-            </a>
+            </div>
         </div>
     </nav>
-        <section>
-            <div class="main-container">
-                <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
-                    <img src="/images/ballaslogo.webp" alt=""srcset=""width="500" height="500">
+
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <img src="./images/ballaslogo.webp" alt="Ballas Logo" width="500" height="500">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Welcome To <span>Ballas Gang</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">We Are <span></span></div>
+                <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+                    One of the most notorious street gangs, known for their influence and power. Rooted deep in the streets, they dominate territories and have a strong sense of brotherhood.
+                </p>
+                <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Made In Morocco</p>
+                <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
+                    <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" title="Discord"><i class="fa-brands fa-discord"></i></a>
                 </div>
-                <div class="content">
-                    <h1 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="800">Welcome To <span>Ballas Gang</span></h1>
-                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">We Are <span></span></div>
-                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">One of the most notorious street gangs, known for their influence and power. Rooted deep in the streets, they dominate territories and have a strong sense of brotherhood</p>
-                    <p data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">Made In Morocco</p>
-                    <div class="social-links" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1200">
-                        <a href="#" ><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"><i class="fa-brands fa-discord"></i></a>
-                    </div>
-                    <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
-                        <a href="https://discord.gg/chQagNKae4">
+                <div class="btn" data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1300">
+                    <a href="https://discord.gg/chQagNKae4">
                         <button>Discord Server</button>
-                        </a>
-                    </div>
+                    </a>
                 </div>
             </div>
-        </section>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          AOS.init({offset:0});
-        </script>
-        <script>
-            function hamburg(){
-                const navbar = document.querySelector(".dropdown")
-                navbar.style.transform = "translateY(0px)"
-            }
-            function cancel(){
-                const navbar = document.querySelector(".dropdown")
-                navbar.style.transform = "translateY(-500px)"
-            }
-        </script>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset: 0});
+    </script>
+    <script>
+        function hamburg() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(0px)";
+        }
+
+        function cancel() {
+            const navbar = document.querySelector(".dropdown");
+            navbar.style.transform = "translateY(-500px)";
+        }
+
+        // Fixing mobile touch issue
+        document.querySelector(".hamburg").addEventListener("touchstart", function() {
+            hamburg();
+        });
+
+        document.querySelector(".cancel").addEventListener("touchstart", function() {
+            cancel();
+        });
+    </script>
 </body>
 </html>
