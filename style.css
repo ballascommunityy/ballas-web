@@ -110,6 +110,7 @@ nav{
     transform: translateY(-500px);
     width: 100%;
     height: auto;
+    -webkit-backdrop-filter: brightness(40%) blur(3px);
     backdrop-filter: brightness(40%) blur(3px);
     box-shadow: 0 0 20px black;
     transition: 0.2s linear;
@@ -212,7 +213,7 @@ section{
     filter: drop-shadow(0 0 10px rgb(119, 0, 255));
 }
 .content button{
-    width: 40%;
+    width: 80%;
     height: 6vh;
     margin: 30px;
     background-color: rgb(162, 0, 255);
